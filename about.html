@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Gyatbox</title>
+    <meta
+      name="description"
+      content="Learn more about Gyatbox, a small tools directory that hosts simple, fast utilities for creators, developers, and automation enthusiasts."
+    />
+    <meta name="google-adsense-account" content="ca-pub-3237855763291333" />
+
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        background: #050816;
+        color: #f9fafb;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      header,
+      footer {
+        border-bottom: 1px solid #1f2937;
+        background: #020617;
+      }
+
+      footer {
+        border-top: 1px solid #1f2937;
+        border-bottom: none;
+      }
+
+      .nav,
+      .content,
+      .footer-inner {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 1rem 1.5rem;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        font-size: 1.1rem;
+      }
+
+      .logo span {
+        color: #6366f1;
+      }
+
+      nav a {
+        color: #9ca3af;
+        text-decoration: none;
+        margin-left: 1.5rem;
+        font-size: 0.95rem;
+      }
+
+      nav a:hover {
+        color: #f9fafb;
+      }
+
+      main {
+        flex: 1;
+      }
+
+      h1 {
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        font-size: 2rem;
+      }
+
+      h2 {
+        margin-top: 1.5rem;
+        margin-bottom: 0.4rem;
+        font-size: 1.25rem;
+      }
+
+      p {
+        color: #d1d5db;
+        font-size: 0.96rem;
+        line-height: 1.7;
+        max-width: 720px;
+      }
+
+      ul {
+        margin: 0.5rem 0 0.5rem 1.2rem;
+        color: #d1d5db;
+        font-size: 0.95rem;
+      }
+
+      .footer-inner {
+        font-size: 0.8rem;
+        color: #9ca3af;
+        display: flex;
+        justify-content: space-between;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+
+      .footer-inner a {
+        color: #9ca3af;
+        text-decoration: none;
+      }
+
+      .footer-inner a:hover {
+        color: #f9fafb;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="nav">
+        <div class="logo">GYAT<span>BOX</span></div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="content">
+        <h1>About Gyatbox</h1>
+        <p>
+          Gyatbox is a small, independent project focused on building quick,
+          useful web tools. Instead of trying to be a giant platform, Gyatbox
+          stays intentionally minimal: a main directory at
+          <strong>gyatbox.space</strong> and a set of focused utilities on
+          separate subdomains.
+        </p>
+
+        <h2>Why a tools directory?</h2>
+        <p>
+          Over time it becomes difficult to remember where every little utility
+          lives. Some tools are hosted on their own servers, others on separate
+          projects or experimental deployments. Gyatbox tries to solve this by
+          acting as a single entry point. If you remember the main domain, you
+          can easily jump into:
+        </p>
+        <ul>
+          <li>
+            <strong>tts.gyatbox.space</strong> – AI text to speech for quick
+            audio generation.
+          </li>
+          <li>
+            <strong>n8n.gyatbox.space</strong> – a host for automation and
+            workflow experiments.
+          </li>
+          <li>
+            <strong>memesfx.gyatbox.space</strong> – meme and visual
+            experimentation tools.
+          </li>
+        </ul>
+
+        <h2>Design principles</h2>
+        <p>
+          Every Gyatbox tool follows a few simple rules: pages should load
+          quickly, the interface should stay clean, and there should be as
+          little friction as possible between opening the site and using the
+          tool. The main directory doesn’t try to be fancy – it simply explains
+          what exists and where to find it.
+        </p>
+
+        <h2>Future plans</h2>
+        <p>
+          Gyatbox is flexible by design. Tools may be updated, replaced, or
+          refined over time, but the core idea will stay the same: one domain,
+          multiple utilities, and a simple place to discover them. If you find
+          the tools helpful or have ideas for new ones, you can always reach
+          out through the contact page.
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© <span id="year"></span> Gyatbox. All rights reserved.</span>
+        <span>
+          <a href="index.html">Home</a> ·
+          <a href="contact.html">Contact</a>
+        </span>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent =
+        new Date().getFullYear().toString();
+    </script>
+  </body>
+</html>
