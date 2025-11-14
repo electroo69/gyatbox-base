@@ -1,103 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-adsense-account" content="ca-pub-3237855763291333">
-  <title>Gyatbox – Toolbox for Creators</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background: #fafafa;
-      color: #222;
-      line-height: 1.6;
-    }
-    header {
-      background: #fff;
-      padding: 15px 20px;
-      margin-bottom: 25px;
-      border-bottom: 1px solid #ddd;
-    }
-    nav a {
-      margin-right: 15px;
-      text-decoration: none;
-      color: #0056ff;
-      font-weight: bold;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .tool-box {
-      background: #fff;
-      border: 1px solid #ddd;
-      padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 5px;
-    }
-    h1, h2 {
-      color: #111;
-    }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gyatbox – Online Tools Directory</title>
 
-<header>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/about.html">About</a>
-    <a href="/contact.html">Contact</a>
-  </nav>
-</header>
+    <meta
+      name="description"
+      content="Gyatbox is a simple directory of useful online tools – AI text to speech, n8n automation hosting, and meme generation tools."
+    />
+    <meta name="google-adsense-account" content="ca-pub-3237855763291333" />
 
-<div class="container">
-  <h1>Welcome to Gyatbox</h1>
-  <p>
-    Gyatbox is a simple, fast, and easy-to-use directory of powerful online tools 
-    built for creators, editors, developers, and automation lovers. Whether you're 
-    generating text-to-speech, hosting workflows, or creating memes, Gyatbox brings 
-    all your tools under one roof.
-  </p>
+    <style>
+      :root {
+        --bg: #050816;
+        --bg-soft: #0b1020;
+        --accent: #6366f1;
+        --accent-soft: #4f46e5;
+        --text: #f9fafb;
+        --muted: #9ca3af;
+        --card: #0f172a;
+        --border: #1f2937;
+      }
 
-  <h2>Our Tools</h2>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-  <div class="tool-box">
-    <h3><a href="https://tts.gyatbox.space">TTS – AI Voice Generator</a></h3>
-    <p>
-      Create high-quality AI voices powered by advanced text-to-speech models.  
-      Useful for YouTube videos, short-form content, storytelling, and more.
-    </p>
-  </div>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        background: radial-gradient(circle at top, #111827 0, var(--bg) 45%);
+        color: var(--text);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
 
-  <div class="tool-box">
-    <h3><a href="https://n8n.gyatbox.space">n8n – Automation Host</a></h3>
-    <p>
-      A self-hosted automation platform running on Gyatbox.  
-      Build workflows, connect APIs, automate your daily tasks, and run 24/7 automations.
-    </p>
-  </div>
+      header {
+        border-bottom: 1px solid var(--border);
+        background: rgba(5, 8, 22, 0.9);
+        backdrop-filter: blur(12px);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
 
-  <div class="tool-box">
-    <h3><a href="https://memesfx.gyatbox.space">MemesFX – Meme Effects Generator</a></h3>
-    <p>
-      Create meme effects, captions, overlays and more. Perfect for Instagram reels, 
-      YouTube Shorts, and funny edits. Simple, fast, and creator-friendly.
-    </p>
-  </div>
+      .nav {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 1rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
 
-  <h2>Why Gyatbox?</h2>
-  <p>
-    We believe tools should be simple. No confusing UI, no unnecessary clutter.  
-    Gyatbox gives you a clean, focused platform to get things done quickly.  
-    This site acts as the main hub where you can discover every tool in the Gyatbox ecosystem.
-  </p>
+      .logo {
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        font-size: 1.1rem;
+      }
 
-  <p>
-    More tools will be added soon as we continue to expand the Gyatbox platform.
-  </p>
-</div>
+      .logo span {
+        color: var(--accent);
+      }
 
-</body>
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
+        margin-left: 1.5rem;
+        font-size: 0.95rem;
+      }
+
+      nav a:hover {
+        color: var(--text);
+      }
+
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 2.5rem 1.5rem 3rem;
+        flex: 1;
+      }
+
+      .hero {
+        margin-bottom: 2.5rem;
+      }
+
+      .hero-eyebrow {
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 0.15em;
+        color: var(--accent);
+        margin-bottom: 0.5rem;
+      }
+
+      h1 {
+        font-size: clamp(2.1rem, 3vw, 2.6rem);
+        line-height: 1.15;
+        margin-bottom: 0.75rem;
+      }
+
+      .hero-subtitle {
+        max-width: 640px;
+        color: var(--muted);
+        font-size: 0.98rem;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        background: rgba(79, 70, 229, 0.12);
+        padding: 0.4rem 0.8rem;
+        border-radius: 999px;
+        border: 1px solid rgba(99, 102, 241, 0.4);
+        font-size: 0.75rem;
+        color: var(--muted);
+        margin-bottom: 1.25rem;
+      }
+
+      .pill span {
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: #22c55e;
+      }
+
+      .section-title {
+        font-size: 1.3rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .section-text {
+        color: var(--muted);
+        font-size: 0.95rem;
+        max-width: 720px;
+        margin-bottom: 1.5rem;
+      }
+
+      .tools-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.25rem;
+      }
+
+      .tool-card {
+        background: radial-gradient(circle at top left, #111827, var(--card));
+        border-radius: 0.9rem;
+        padding: 1.25rem 1.3rem;
+        border: 1px solid var(--border);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .tool-label {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--muted);
+        margin-bottom: 0.4rem;
+      }
+
+      .tool-name {
+        font-size: 1.1rem;
+        margin-bottom: 0.3rem;
+      }
+
+      .tool-url {
+        font-size: 0.8rem;
+        color: var(--accent);
+        margin-bottom: 0.6rem;
+      }
+
+      .tool-desc {
+        font-size: 0.9rem;
+        color: var(--muted);
+        margin-bottom: 0.9rem;
+      }
+
+      .tool-pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+        margin-bottom: 0.4rem;
+      }
+
+      .tool-pill {
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.5);
+        padding: 0.15rem 0.6rem;
+        font-size: 0.75rem;
+        color: var(--muted);
+      }
+
+      .tool-link {
+        margin-top: 0.4rem;
+        font-size: 0.86rem;
+      }
+
+      .tool-link a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .tool-link a:hover {
+        text-decoration: underline;
+      }
+
+      .info-block {
+        margin-top: 2.3rem;
+        padding: 1.1rem 1.2rem;
+        border-radius: 0.9rem;
+        border: 1px dashed rgba(148, 163, 184, 0.4);
+        background: rgba(15, 23, 42, 0.9);
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      footer {
+        border-top: 1px solid var(--border);
+        background: #020617;
+      }
+
+      .footer-inner {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 1rem 1.5rem 1.4rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0.75rem;
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+
+      .footer-inner a {
+        color: var(--muted);
+        text-decoration: none;
+      }
+
+      .footer-inner a:hover {
+        color: var(--text);
+      }
+
+      @media (max-width: 640px) {
+        nav a {
+          margin-left: 1rem;
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="nav">
+        <div class="logo">GYAT<span>BOX</span></div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="pill">
+          <span></span> Curated utilities for creators & builders
+        </div>
+        <p class="hero-eyebrow">Gyatbox Tools Directory</p>
+        <h1>All your favorite web tools under one simple domain.</h1>
+        <p class="hero-subtitle">
+          Gyatbox is a small collection of focused utilities – from AI text to
+          speech to meme generation and automation hosting. Each tool lives on
+          its own subdomain, but everything starts here at
+          <strong>gyatbox.space</strong>.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="section-title">Available tools</h2>
+        <p class="section-text">
+          The Gyatbox directory is designed to be fast, minimal, and easy to
+          remember. You can bookmark this page and jump into any tool whenever
+          you need it. New utilities may be added over time as experiments turn
+          into stable projects.
+        </p>
+
+        <div class="tools-grid">
+          <article class="tool-card">
+            <p class="tool-label">AI Voice Generator</p>
+            <h3 class="tool-name">Gyatbox TTS</h3>
+            <p class="tool-url">tts.gyatbox.space</p>
+            <p class="tool-desc">
+              Convert text into natural-sounding speech for videos, shorts,
+              narration, or quick voice mockups. Built for creators who want
+              fast results without complicated dashboards.
+            </p>
+            <div class="tool-pill-row">
+              <span class="tool-pill">Text to Speech</span>
+              <span class="tool-pill">Content Creation</span>
+              <span class="tool-pill">Audio</span>
+            </div>
+            <p class="tool-link">
+              <a href="https://tts.gyatbox.space" target="_blank"
+                >Open tts.gyatbox.space →</a
+              >
+            </p>
+          </article>
+
+          <article class="tool-card">
+            <p class="tool-label">Automation Host</p>
+            <h3 class="tool-name">Gyatbox n8n</h3>
+            <p class="tool-url">n8n.gyatbox.space</p>
+            <p class="tool-desc">
+              A private n8n host for building automations, workflows, and simple
+              bots. Connect APIs, send data between services, and keep your
+              background tasks running in one place.
+            </p>
+            <div class="tool-pill-row">
+              <span class="tool-pill">Automation</span>
+              <span class="tool-pill">Workflows</span>
+              <span class="tool-pill">Self-hosted</span>
+            </div>
+            <p class="tool-link">
+              <a href="https://n8n.gyatbox.space" target="_blank"
+                >Open n8n.gyatbox.space →</a
+              >
+            </p>
+          </article>
+
+          <article class="tool-card">
+            <p class="tool-label">Meme & FX Tool</p>
+            <h3 class="tool-name">MemesFX</h3>
+            <p class="tool-url">memesfx.gyatbox.space</p>
+            <p class="tool-desc">
+              Generate and manage meme-style visuals and effects for social
+              media posts. Ideal for quick ideas, experiment clips, and fun
+              content that doesn’t need a full editing timeline.
+            </p>
+            <div class="tool-pill-row">
+              <span class="tool-pill">Memes</span>
+              <span class="tool-pill">Social Media</span>
+              <span class="tool-pill">Visual FX</span>
+            </div>
+            <p class="tool-link">
+              <a href="https://memesfx.gyatbox.space" target="_blank"
+                >Open memesfx.gyatbox.space →</a
+              >
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="info-block">
+        <strong>About this site</strong>
+        <p>
+          Gyatbox.space acts as the main directory and landing page for all
+          tools under the Gyatbox namespace. Some utilities are experimental
+          and may change, but the goal is always the same: lightweight tools
+          that load quickly and help you create more in less time. No
+          unnecessary clutter, just direct links and simple explanations.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© <span id="year"></span> Gyatbox. All rights reserved.</span>
+        <span>
+          <a href="about.html">About</a> ·
+          <a href="contact.html">Contact</a>
+        </span>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent =
+        new Date().getFullYear().toString();
+    </script>
+  </body>
 </html>
