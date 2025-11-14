@@ -158,6 +158,8 @@
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
+          <a href="policy.html">Privacy</a>
+          <a href="terms.html">Terms of service</a>
         </nav>
       </div>
     </header>
@@ -196,15 +198,16 @@
       <div class="footer-inner">
         <span>© <span id="year"></span> Gyatbox. All rights reserved.</span>
         <span>
-          <a href="index.html">Home</a> ·
-          <a href="about.html">About</a>
+          <a href="about.html">About</a> ·
+          <a href="contact.html">Contact</a>
         </span>
       </div>
     </footer>
 
     <script>
-      document.getElementById("year").textContent =
-        new Date().getFullYear().toString();
+      document.getElementById("year").textContent = new Date()
+        .getFullYear()
+        .toString();
     </script>
   </body>
 </html>
