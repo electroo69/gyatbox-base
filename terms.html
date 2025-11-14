@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms & Conditions – Gyatbox</title>
+    <meta
+      name="description"
+      content="Read the terms and conditions for using Gyatbox.space."
+    />
+    <meta name="google-adsense-account" content="ca-pub-3237855763291333" />
+
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        background: #050816;
+        color: #f9fafb;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      header,
+      footer {
+        background: #020617;
+        border-bottom: 1px solid #1f2937;
+      }
+
+      footer {
+        border-top: 1px solid #1f2937;
+        border-bottom: none;
+      }
+
+      .nav,
+      .content,
+      .footer-inner {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 1rem 1.5rem;
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-weight: 700;
+        letter-spacing: 0.05em;
+      }
+
+      .logo span {
+        color: #6366f1;
+      }
+
+      nav a {
+        margin-left: 1rem;
+        color: #9ca3af;
+        text-decoration: none;
+      }
+
+      nav a:hover {
+        color: #f9fafb;
+      }
+
+      h1 {
+        margin-top: 1.5rem;
+      }
+
+      h2 {
+        margin-top: 1.4rem;
+        margin-bottom: 0.4rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+        color: #d1d5db;
+        line-height: 1.7;
+        max-width: 720px;
+      }
+
+      ul {
+        margin-left: 1.2rem;
+        color: #d1d5db;
+        font-size: 0.95rem;
+      }
+
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        color: #9ca3af;
+        font-size: 0.85rem;
+      }
+
+      .footer-inner a {
+        color: #9ca3af;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="nav">
+        <div class="logo">GYAT<span>BOX</span></div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="policy.html">Policy</a>
+          <a href="terms.html">Terms</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="content">
+        <h1>Terms & Conditions</h1>
+
+        <p>
+          By accessing Gyatbox.space or any of its subdomains, you agree to the
+          terms listed below. If you do not agree, you should discontinue use of
+          the site and its tools.
+        </p>
+
+        <h2>Use of the Site</h2>
+        <p>
+          Gyatbox provides simple utilities such as text-to-speech, workflow
+          automation, and meme generation. These tools are offered “as-is”
+          without any guarantees or warranties.
+        </p>
+
+        <h2>Acceptable Use</h2>
+        <p>You agree not to use Gyatbox or its tools for:</p>
+        <ul>
+          <li>Illegal activities</li>
+          <li>Harmful or abusive behavior</li>
+          <li>Spamming or automated misuse</li>
+          <li>Disrupting or attacking any services</li>
+        </ul>
+
+        <h2>Third-Party Tools</h2>
+        <p>
+          Some Gyatbox tools may integrate or communicate with third-party
+          services. These are governed by their own terms and privacy policies.
+        </p>
+
+        <h2>Liability</h2>
+        <p>
+          Gyatbox is not responsible for any loss, damage, or data errors caused
+          by your usage of the site or its tools. Use everything at your own
+          risk.
+        </p>
+
+        <h2>Changes to Terms</h2>
+        <p>
+          These terms may be updated occasionally. Changes will be posted on
+          this page.
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© <span id="year"></span> Gyatbox. All rights reserved.</span>
+        <span>
+          <a href="policy.html">Policy</a> ·
+          <a href="index.html">Home</a>
+        </span>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>
