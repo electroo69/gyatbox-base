@@ -267,11 +267,13 @@
             throw new Error("Failed to load posts");
           }
 
-          let posts = await response.json();
+          let data = await response.json();
 
-          // Ensure posts is an array
+          // Handle both array format and object with posts property
+          let posts = Array.isArray(data) ? data : data.posts || [];
+
           if (!Array.isArray(posts)) {
-            console.error("Posts data is not an array:", posts);
+            console.error("Posts data is not valid:", data);
             throw new Error("Invalid posts data format");
           }
 
