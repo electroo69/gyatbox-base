@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- EDIT: Update title with your post title -->
+    <title>Your Post Title – Gyatbox</title>
+
+    <!-- EDIT: Update description with your post description -->
+    <meta name="description" content="Your post description goes here." />
+
+    <link rel="stylesheet" href="blog-post-styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="nav">
+        <a href="../index.html" class="logo">GYAT<span>BOX</span></a>
+        <nav>
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About</a>
+          <a href="../contact.html">Contact</a>
+          <a href="../blog.html">Blog</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <div class="post-header">
+          <!-- EDIT: Update date (format: Month Day, Year) -->
+          <p class="post-meta">January 1, 2025</p>
+
+          <!-- EDIT: Update title -->
+          <h1>Your Post Title</h1>
+        </div>
+
+        <div class="post-content">
+          <!-- EDIT: Add your content below -->
+
+          <p>
+            This is your opening paragraph. Introduce the topic and hook your
+            readers.
+          </p>
+
+          <h2>Main Section Heading</h2>
+          <p>Add your content here. You can use paragraphs, lists, and more.</p>
+
+          <h3>Subsection Heading</h3>
+          <p>More detailed content goes here.</p>
+
+          <h2>Another Section</h2>
+          <p>Here's an example of a bulleted list:</p>
+          <ul>
+            <li>First point</li>
+            <li>Second point</li>
+            <li>Third point</li>
+          </ul>
+
+          <p>And here's a numbered list:</p>
+          <ol>
+            <li>Step one</li>
+            <li>Step two</li>
+            <li>Step three</li>
+          </ol>
+
+          <p>
+            You can also add links like this:
+            <a href="https://example.com">link text</a>.
+          </p>
+
+          <p>For inline code, use: <code>const example = "code";</code></p>
+
+          <h2>Conclusion</h2>
+          <p>Wrap up your post with a conclusion or call to action.</p>
+        </div>
+
+        <a href="../blog.html" class="back-link">← Back to Blog</a>
+      </article>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© <span id="year"></span> Gyatbox. All rights reserved.</span>
+        <span>
+          <a href="../about.html">About</a> ·
+          <a href="../contact.html">Contact</a>
+        </span>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date()
+        .getFullYear()
+        .toString();
+    </script>
+  </body>
+</html>
