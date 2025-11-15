@@ -267,7 +267,13 @@
             throw new Error("Failed to load posts");
           }
 
-          const posts = await response.json();
+          let posts = await response.json();
+
+          // Ensure posts is an array
+          if (!Array.isArray(posts)) {
+            console.error("Posts data is not an array:", posts);
+            throw new Error("Invalid posts data format");
+          }
 
           if (posts.length === 0) {
             container.innerHTML = '<div class="loading">No posts yet.</div>';
