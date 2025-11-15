@@ -11,6 +11,7 @@
     },
     {
       "id": "this-is-a-test",
+      "slug": "this-is-a-test",
       "title": "This is a test",
       "date": "2025-11-15",
       "description": "This is a test",
