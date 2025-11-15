@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Gyatbox Blog – Gyatbox</title>
+    <meta
+      name="description"
+      content="Discover what Gyatbox is all about and how our tools can help streamline your creative workflow."
+    />
+    <link rel="stylesheet" href="blog-post-styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="nav">
+        <a href="../index.html" class="logo">GYAT<span>BOX</span></a>
+        <nav>
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About</a>
+          <a href="../contact.html">Contact</a>
+          <a href="../blog.html">Blog</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <div class="post-header">
+          <p class="post-meta">February 1, 2025</p>
+          <h1>Welcome to Gyatbox Blog</h1>
+        </div>
+
+        <div class="post-content">
+          <p>
+            Welcome to the official Gyatbox blog! We're excited to share
+            updates, tutorials, and insights about our growing collection of web
+            tools.
+          </p>
+
+          <h2>What is Gyatbox?</h2>
+          <p>
+            Gyatbox is a curated directory of lightweight, fast-loading web
+            utilities designed for creators, developers, and automation
+            enthusiasts. Each tool lives on its own subdomain under
+            <strong>gyatbox.space</strong>, making it easy to bookmark and
+            access exactly what you need.
+          </p>
+
+          <h2>Our Tools</h2>
+          <p>Currently, the Gyatbox directory includes:</p>
+          <ul>
+            <li>
+              <strong>Gyatbox TTS</strong> – Convert text into natural-sounding
+              speech for videos, narration, and content creation
+            </li>
+            <li>
+              <strong>Gyatbox n8n</strong> – A private automation host for
+              building workflows and connecting APIs
+            </li>
+            <li>
+              <strong>MemesFX</strong> – Generate meme-style visuals and effects
+              for social media
+            </li>
+          </ul>
+
+          <h2>What's Next?</h2>
+          <p>
+            We'll be sharing regular updates about new features, tool additions,
+            and practical guides to help you get the most out of each utility.
+            Stay tuned for tutorials, use cases, and behind-the-scenes looks at
+            how Gyatbox is built.
+          </p>
+
+          <p>
+            Have feedback or ideas? Feel free to
+            <a href="../contact.html">reach out</a> – we'd love to hear from
+            you.
+          </p>
+        </div>
+
+        <a href="../blog.html" class="back-link">← Back to Blog</a>
+      </article>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© <span id="year"></span> Gyatbox. All rights reserved.</span>
+        <span>
+          <a href="../about.html">About</a> ·
+          <a href="../contact.html">Contact</a>
+        </span>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date()
+        .getFullYear()
+        .toString();
+    </script>
+  </body>
+</html>

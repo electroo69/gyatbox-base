@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Welcome to Gyatbox Blog",
+    "slug": "welcome-to-gyatbox",
+    "date": "2025-02-01",
+    "description": "Discover what Gyatbox is all about and how our tools can help streamline your creative workflow."
+  },
+  {
+    "title": "Getting Started with AI Text-to-Speech",
+    "slug": "getting-started-tts",
+    "date": "2025-02-05",
+    "description": "Learn how to use Gyatbox TTS to create natural-sounding voiceovers for your content in minutes."
+  }
+]
