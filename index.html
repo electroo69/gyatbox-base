@@ -3,42 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gyatbox - Creative Tools for Digital Makers</title>
-    <meta name="description" content="Gyatbox offers a suite of free online tools for creators, including AI Text-to-Speech, Meme Generators, and Automation workflows. Build faster with Gyatbox.">
+    <title>Gyatbox - Free Online Creator Tools & Automation Suite</title>
+    <meta name="description" content="Gyatbox is a free suite of browser-based tools for digital creators. Use our Neural TTS, Meme Generators, and Automation workflows to build content faster.">
     <style>
-        :root { --primary: #2563eb; --dark: #1e293b; --light: #f8fafc; --text: #334155; }
-        body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: var(--text); background: var(--light); margin: 0; padding: 0; }
-        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        :root { --primary: #2563eb; --dark: #0f172a; --light: #f1f5f9; --text: #334155; --accent: #3b82f6; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.7; color: var(--text); background: #fff; margin: 0; padding: 0; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
         
         /* Navigation */
-        nav { background: white; border-bottom: 1px solid #e2e8f0; padding: 1rem 0; }
-        nav .container { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-weight: 800; font-size: 1.5rem; color: var(--dark); text-decoration: none; }
-        .nav-links a { margin-left: 20px; text-decoration: none; color: var(--text); font-weight: 500; }
+        nav { background: white; border-bottom: 1px solid #e2e8f0; padding: 1.2rem 0; position: sticky; top: 0; z-index: 100; }
+        nav .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo { font-weight: 900; font-size: 1.6rem; color: var(--primary); text-decoration: none; letter-spacing: -0.5px; }
+        .nav-links a { margin-left: 20px; text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.95rem; }
         .nav-links a:hover { color: var(--primary); }
 
         /* Hero Section */
-        header { padding: 4rem 0; text-align: center; background: white; }
-        h1 { font-size: 2.5rem; color: var(--dark); margin-bottom: 1rem; }
-        .subtitle { font-size: 1.25rem; color: #64748b; max-width: 600px; margin: 0 auto 2rem; }
-        .btn { display: inline-block; background: var(--primary); color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; transition: background 0.2s; }
-        .btn:hover { background: #1d4ed8; }
+        header { padding: 5rem 0 4rem; text-align: center; background: linear-gradient(to bottom, #eff6ff, #fff); border-bottom: 1px solid #e2e8f0; }
+        h1 { font-size: 3rem; color: var(--dark); margin-bottom: 1.5rem; line-height: 1.2; }
+        .subtitle { font-size: 1.2rem; color: #64748b; max-width: 700px; margin: 0 auto 2.5rem; }
+        .btn { display: inline-block; background: var(--primary); color: white; padding: 14px 28px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: transform 0.2s, box-shadow 0.2s; }
+        .btn:hover { background: #1d4ed8; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2); }
 
-        /* Content Sections */
+        /* Tools Grid */
         section { padding: 4rem 0; }
-        h2 { font-size: 2rem; color: var(--dark); margin-bottom: 2rem; text-align: center; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; }
-        .card h3 { margin-top: 0; color: var(--dark); }
-        .card a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        h2 { font-size: 2.2rem; color: var(--dark); margin-bottom: 1rem; text-align: left; }
+        .section-intro { margin-bottom: 3rem; font-size: 1.1rem; color: #64748b; }
         
-        /* Text Content Areas (Crucial for AdSense) */
-        .article-content { background: white; padding: 3rem; border-radius: 8px; margin-top: 2rem; }
-        .article-content h3 { margin-top: 2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
+        .card { background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; transition: border-color 0.2s; }
+        .card:hover { border-color: var(--primary); }
+        .card h3 { margin-top: 0; color: var(--dark); font-size: 1.4rem; }
+        .card p { margin-bottom: 1.5rem; color: #64748b; }
+        .card-link { color: var(--primary); text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; }
         
-        footer { background: var(--dark); color: #94a3b8; padding: 3rem 0; margin-top: 4rem; text-align: center; }
-        footer a { color: #cbd5e1; text-decoration: none; margin: 0 10px; }
-        footer a:hover { color: white; }
+        /* Content Blocks (SEO Heavy) */
+        .content-block { background: #fff; margin: 3rem 0; }
+        .content-block h3 { font-size: 1.6rem; color: var(--dark); margin-top: 2.5rem; }
+        .content-block p { margin-bottom: 1.5rem; font-size: 1.05rem; }
+        .content-block ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        .content-block li { margin-bottom: 0.5rem; }
+        
+        .feature-box { background: var(--light); padding: 2rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid var(--primary); }
+
+        /* FAQ Section */
+        .faq-item { margin-bottom: 1.5rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1.5rem; }
+        .faq-question { font-weight: 700; color: var(--dark); font-size: 1.1rem; margin-bottom: 0.5rem; display: block; }
+        
+        footer { background: var(--dark); color: #94a3b8; padding: 4rem 0; margin-top: 4rem; text-align: center; border-top: 1px solid #1e293b; }
+        footer a { color: #cbd5e1; text-decoration: none; margin: 0 15px; font-size: 0.9rem; }
+        footer a:hover { color: white; text-decoration: underline; }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .nav-links { display: none; } /* Simplified for mobile example */
+        }
     </style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUB_ID_HERE" crossorigin="anonymous"></script>
 </head>
@@ -48,9 +66,9 @@
     <div class="container">
         <a href="/" class="logo">GYATBOX</a>
         <div class="nav-links">
-            <a href="/">Home</a>
-            <a href="/about.html">About Us</a>
-            <a href="/blog.html">Blog</a>
+            <a href="#tools">Tools</a>
+            <a href="#guide">How to Use</a>
+            <a href="#faq">FAQ</a>
             <a href="/contact.html">Contact</a>
         </div>
     </div>
@@ -58,61 +76,102 @@
 
 <header>
     <div class="container">
-        <h1>Essential Tools for Modern Creators</h1>
-        <p class="subtitle">A curated suite of fast, privacy-focused utilities designed to help you create memes, generate voiceovers, and automate workflows.</p>
-        <a href="#tools" class="btn">Explore Tools</a>
+        <h1>Digital Tools for the<br>Modern Creator Economy</h1>
+        <p class="subtitle">Gyatbox provides a centralized suite of high-performance utilities. Generate AI voiceovers, design viral memes, and automate workflows directly in your browser.</p>
+        <a href="#tools" class="btn">Start Creating Now</a>
     </div>
 </header>
 
-<section id="tools">
-    <div class="container">
-        <h2>Our Utility Suite</h2>
+<div class="container">
+    <section id="tools">
+        <h2>The Creator Suite</h2>
+        <p class="section-intro">Access our core utilities. No installation required. All tools run optimized for speed and privacy.</p>
         <div class="grid">
             <div class="card">
-                <h3>MemesFX Studio</h3>
-                <p>An advanced browser-based editor for creating viral memes and visual effects. No watermarks, high-performance rendering, and instant export.</p>
-                <a href="https://memesfx.gyatbox.space/">Launch App &rarr;</a>
+                <h3>🎨 MemesFX Studio</h3>
+                <p>A professional-grade visual editor optimized for rapid meme creation and image manipulation. Features layer support, custom fonts, and watermark-free exports.</p>
+                <a href="https://memesfx.gyatbox.space/" class="card-link">Launch Studio &rarr;</a>
             </div>
             <div class="card">
-                <h3>Gyatbox TTS</h3>
-                <p>Turn text into lifelike speech using our neural network integration. Perfect for YouTube shorts, TikTok narration, and accessibility testing.</p>
-                <a href="https://tts.gyatbox.space/">Open TTS &rarr;</a>
+                <h3>🗣️ Gyatbox TTS</h3>
+                <p>Neural Text-to-Speech engine designed for content creators. Generate realistic voiceovers for YouTube Shorts, TikTok, and Instagram Reels in seconds.</p>
+                <a href="https://tts.gyatbox.space/" class="card-link">Open TTS Engine &rarr;</a>
             </div>
             <div class="card">
-                <h3>n8n Automation</h3>
-                <p>A self-hosted environment for connecting your favorite apps. Build complex workflows without writing code.</p>
-                <a href="https://n8n.gyatbox.space/">Access Dashboard &rarr;</a>
+                <h3>⚡ n8n Workflow</h3>
+                <p>Advanced automation for power users. Connect APIs, schedule tasks, and build complex logic flows without writing a single line of code.</p>
+                <a href="https://n8n.gyatbox.space/" class="card-link">Access Dashboard &rarr;</a>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="about-content" style="background: #eef2ff;">
-    <div class="container">
-        <div class="article-content">
-            <h2>Why Use Gyatbox?</h2>
-            <p>In the rapidly evolving digital landscape, content creators need tools that are agile, reliable, and easy to access. Gyatbox.space was built to bridge the gap between complex software and simple daily tasks.</p>
+    <section id="guide" class="content-block">
+        <h2>Optimizing Your Content Creation Workflow</h2>
+        <p>In the fast-paced world of digital media, speed is the ultimate competitive advantage. Gyatbox was architected to remove friction from the creative process. By moving essential rendering and processing tasks to the browser, we eliminate the need for bloated software installations.</p>
+
+        <h3>Why Browser-Based Tools Matter</h3>
+        <p>Traditional desktop software often consumes significant system resources and requires regular updates. Gyatbox tools are "Always On" and "Always Updated." whether you are on a Chromebook, a high-end PC, or a tablet, your experience remains consistent.</p>
+        <ul>
+            <li><strong>Zero Setup Time:</strong> Start creating immediately without configuring drivers or libraries.</li>
+            <li><strong>Cross-Platform Compatibility:</strong> Projects work seamlessly across Windows, macOS, and Linux.</li>
+            <li><strong>Privacy Focused:</strong> Our client-side processing ensures your raw assets often never leave your device.</li>
+        </ul>
+
+        <h3>Guide: Creating Viral Short-Form Content</h3>
+        <p>Combining the power of MemesFX and Gyatbox TTS allows for a streamlined production pipeline for platforms like TikTok and YouTube Shorts.</p>
+        
+        <div class="feature-box">
+            <h4>Step 1: Audio Synthesis</h4>
+            <p>Start by scripting your narrative. Copy your script into the <strong>Gyatbox TTS</strong> engine. Select a voice model that matches your brand tone—whether energetic for gaming content or calm for educational tutorials. Download the .MP3 output.</p>
             
-            <h3>Streamlined for Speed</h3>
-            <p>Unlike bloated software suites that require heavy downloads, all Gyatbox tools run directly in your browser. Whether you are generating a quick meme with <strong>MemesFX</strong> or synthesizing audio with our <strong>TTS engine</strong>, the processing happens instantly.</p>
-
-            <h3>Privacy First</h3>
-            <p>We believe in user privacy. Most of our client-side tools process data locally on your device whenever possible, ensuring your creative assets remain yours. We do not sell user data to third parties.</p>
-
-            <h3>Community Driven Development</h3>
-            <p>Gyatbox is an open platform that evolves based on feedback. Our goal is to provide a "Swiss Army Knife" for digital builders—combining visual, audio, and logic tools under one unified domain.</p>
+            <h4>Step 2: Visual Assembly</h4>
+            <p>Open <strong>MemesFX Studio</strong>. Import your background assets or use our template library. Layer your text overlays using high-contrast fonts (like Impact or Open Sans) to ensure readability on mobile screens. Sync your visuals to the audio pacing.</p>
+            
+            <h4>Step 3: Export and Publish</h4>
+            <p>Our rendering engine ensures that your final file is compressed for web upload without losing visual fidelity. Download your asset and upload directly to your social platforms.</p>
         </div>
-    </div>
-</section>
+
+        <h3>Understanding Automation with n8n</h3>
+        <p>For creators managing multiple channels, manual posting can become a bottleneck. Our hosted n8n environment allows you to link webhooks and APIs. For example, you can create a workflow that automatically posts a tweet whenever you publish a new video, or saves your generated TTS files to Google Drive automatically.</p>
+    </section>
+
+    <section id="faq" class="content-block">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+            <span class="faq-question">Is Gyatbox free to use?</span>
+            <p>Yes, the core tools available on Gyatbox.space are free to access. We believe in democratizing access to high-quality creative tools. We are supported by unobtrusive advertising.</p>
+        </div>
+
+        <div class="faq-item">
+            <span class="faq-question">Do I need to create an account?</span>
+            <p>For most tools like MemesFX and basic TTS, no account is required. You can jump in and start creating immediately. Advanced automation features may require authentication to save your workflow states secure.</p>
+        </div>
+
+        <div class="faq-item">
+            <span class="faq-question">Can I use the generated content commercially?</span>
+            <p>Absolutely. The content you create using our tools belongs to you. You are free to monetize your videos, memes, and audio on platforms like YouTube, Patreon, or your own website.</p>
+        </div>
+
+        <div class="faq-item">
+            <span class="faq-question">How does Gyatbox handle user privacy?</span>
+            <p>We prioritize user privacy. Unlike server-heavy alternatives, many of our operations run locally in your browser sandbox. We do not sell your personal data or uploaded assets to third-party brokers.</p>
+        </div>
+    </section>
+</div>
 
 <footer>
     <div class="container">
-        <p>&copy; 2025 Gyatbox.space. All rights reserved.</p>
-        <div style="margin-top: 1rem;">
+        <p>&copy; 2025 Gyatbox.space. Built for the Open Web.</p>
+        <div style="margin-top: 1.5rem;">
             <a href="/privacy.html">Privacy Policy</a>
             <a href="/terms.html">Terms of Service</a>
-            <a href="/contact.html">Contact Us</a>
+            <a href="/cookie-policy.html">Cookie Policy</a>
+            <a href="/contact.html">Contact Support</a>
         </div>
+        <p style="font-size: 0.8rem; color: #475569; margin-top: 2rem;">
+            Disclaimer: Gyatbox is not affiliated with TikTok, YouTube, or n8n.io. All trademarks belong to their respective owners.
+        </p>
     </div>
 </footer>
 
